@@ -1,0 +1,14 @@
+/build/
+/.claude/
+*.syso
+.DS_Store
+.env
+.env.*
+!.env.example
+*.log
+shelf.json
+shelf.json.bak
+/DragExports/
+/docs/schedule-native.png
+/docs/native-shelf.png
+/docs/preview.png

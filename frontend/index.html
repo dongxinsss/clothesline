@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>拾光绳 · 随手挂起一点灵感</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="appearance.css"></head>
+<body>
+<main id="shelf" class="shelf" aria-label="拾光绳">
+  <header class="toolbar">
+    <div class="brand drag"><span class="brand-mark" aria-hidden="true">⌁</span><strong>拾光绳</strong><span class="brand-en">CLOTHESLINE</span></div>
+    <nav class="filters" aria-label="筛选卡片"><button data-filter="all" class="selected">全部 <span id="count">0</span></button><button data-filter="image">截图</button><button data-filter="text">文字</button><button data-action="schedule" title="日程" aria-label="日程">日程</button></nav>
+    <div class="toolbar-spacer drag"></div>
+    <button id="auto" class="auto" title="切换自动收集剪贴板图片" aria-pressed="true"><i></i><span>自动收集</span></button>
+    <span class="divider"></span>
+    <button class="icon-button" data-action="history" title="历史记录" aria-label="历史记录"><svg><use href="#i-history"/></svg></button>
+    <button class="icon-button" data-action="paste" title="挂上剪贴板内容（⌘/Ctrl+V）" aria-label="粘贴"><svg><use href="#i-paste"/></svg></button>
+    <button class="icon-button" data-action="compose" title="新建文字（⌘/Ctrl+N）" aria-label="新建文字"><svg><use href="#i-text"/></svg></button>
+    <button class="capture" data-action="capture"><svg><use href="#i-capture"/></svg>截图</button>
+    <button class="capture scroll-capture-button" data-action="scrollcapture"><svg><use href="#i-scrollcapture"/></svg>滚动截图</button>
+    <span class="divider"></span>
+    <button class="icon-button" data-action="settings" title="偏好设置" aria-label="偏好设置"><svg><use href="#i-settings"/></svg></button>
+    <button class="icon-button" data-action="collapse" title="收进小篮子（Esc）" aria-label="收起"><svg><use href="#i-collapse"/></svg></button>
+  </header>
+  <section class="line-stage" aria-label="按时间排列的卡片">
+    <div class="rope" aria-hidden="true"><span class="knot left"></span><span class="knot right"></span></div>
+    <div id="cards" class="cards" role="list"></div>
+    <div id="empty" class="empty" hidden><svg><use href="#i-basket"/></svg><div><strong>把刚刚的灵感，挂在这里</strong><span>截个图 · 拖入图片 · 或写一张小纸条</span></div><button data-action="import">挂第一张图片 <span>↗</span></button></div>
+  </section>
+  <footer><span class="local-dot"></span><span>只在本机 · 随手收好</span><span id="timeline" class="timeline">从左到右，时间慢慢走</span><button data-action="import">拖入图片，或点此添加 <span>＋</span></button></footer>
+</main>
+<button id="basket" class="basket" hidden title="点击展开拾光绳，按住拖动可移动" aria-label="展开拾光绳"><img class="basket-mark" src="appicon.svg" alt="" draggable="false"><span id="basket-count">0</span><span class="basket-grip" aria-hidden="true"></span></button>
+<section id="scroll-selection" hidden aria-label="选择滚动截图区域">
+  <img id="scroll-selection-image" alt="当前屏幕，拖动选择需要拼接的内容区域" draggable="false">
+  <div id="scroll-region-box" hidden></div>
+  <div class="selection-help">拖动框选滚动内容，松开鼠标后即可回原页面滚动。<span>Esc 取消</span></div>
+  <div class="selection-actions"><span id="scroll-region-size">先选择一个区域</span><button id="scroll-region-cancel" class="secondary-button">取消</button><button id="scroll-region-confirm" class="primary-button" disabled>开始采集</button></div>
+</section>
+<section id="scroll-controls" class="scroll-controls" hidden aria-label="滚动截图控制台">
+  <header class="drag"><strong>滚动截图</strong><button id="scroll-cancel" class="icon-button" aria-label="取消滚动截图"><svg><use href="#i-close"/></svg></button></header>
+  <p id="scroll-instruction" class="scroll-instruction" aria-live="polite">直接在目标页面向下滚动，会自动采集并拼接。</p>
+  <div id="scroll-progress" role="status">已拼接 1 段</div>
+  <label class="scroll-overlap">手动补采的重叠<select id="scroll-overlap" aria-label="滚动截图重叠区域"><option value="-1">自动识别</option><option value="0">手动 · 无重叠</option><option value="10">手动 · 10%</option><option value="20">手动 · 20%</option><option value="30">手动 · 30%</option><option value="40">手动 · 40%</option><option value="50">手动 · 50%</option><option value="60">手动 · 60%</option><option value="70">手动 · 70%</option><option value="80">手动 · 80%</option></select></label>
+  <div class="scroll-actions"><button id="scroll-next" class="secondary-button">手动补采</button><button id="scroll-finish" class="primary-button">完成并挂上</button></div>
+</section>
+<dialog id="panel"><div class="panel-shell"><header class="panel-header drag"><div><span class="eyebrow">CLOTHESLINE</span><h1 id="panel-title">写一张小纸条</h1></div><button id="panel-close" class="icon-button" aria-label="关闭"><svg><use href="#i-close"/></svg></button></header><div id="panel-content"></div></div></dialog>
+<div id="toast" role="status" aria-live="polite" hidden></div>
+<div id="drop-hint" hidden>松开，把图片挂上来 <span>支持 PNG · JPG · GIF · WebP</span></div>
+<input id="file-input" type="file" accept="image/png,image/jpeg,image/gif,image/webp" multiple hidden>
+<svg class="icon-defs" xmlns="http://www.w3.org/2000/svg"><defs>
+<symbol id="i-capture" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m13-5h3a2 2 0 0 1 2 2v3M3 16v3a2 2 0 0 0 2 2h3m8 0h3a2 2 0 0 0 2-2v-3"/><rect x="7" y="7" width="10" height="10" rx="2"/></symbol>
+<symbol id="i-text" viewBox="0 0 24 24"><path d="M4 5h16M12 5v15M8 20h8M4 5v3m16-3v3"/></symbol>
+<symbol id="i-paste" viewBox="0 0 24 24"><rect x="8" y="3" width="8" height="4" rx="1"/><path d="M8 5H5v16h14V5h-3M8 12h8m-8 4h6"/></symbol>
+<symbol id="i-settings" viewBox="0 0 24 24"><path d="m10 3-1 3-3 1-3-1-1 4 3 2v3l-1 2 3 3 3-1 3 2 2-3h3l2-4-2-2 1-3-3-2-2 1Z"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-collapse" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5M5 5h14"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
+<symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M9 6V3h6v3M6 6l1 15h10l1-15M10 10v7m4-7v7"/></symbol>
+<symbol id="i-basket" viewBox="0 0 40 40"><path d="m8 18 4 16h16l4-16M6 18h28M13 18l7-12 7 12M14 23l1 7m5-7v7m6-7-1 7"/></symbol>
+<symbol id="i-history" viewBox="0 0 24 24"><path d="M3 10a9 9 0 1 1 2 8M3 4v6h6M12 7v5l3 2"/></symbol>
+<symbol id="i-scrollcapture" viewBox="0 0 24 24"><path d="M7 3H4v18h3m10-18h3v18h-3M12 4v16m-3-3 3 3 3-3m-6-10 3-3 3 3"/></symbol>
+</defs></svg><script src="schedule_dates.js"></script><script src="idle.js"></script><script src="quit.js"></script><script src="app.js"></script></body></html>

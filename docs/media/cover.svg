@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760">
+<defs><linearGradient id="sky" x2="1" y2="1"><stop stop-color="#edf7fb"/><stop offset="1" stop-color="#d2e8f1"/></linearGradient><filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#244d63" flood-opacity=".12"/></filter></defs>
+<rect width="1600" height="760" rx="32" fill="url(#sky)"/>
+<path d="M-100 580Q400 260 900 520T1700 450" fill="none" stroke="#fff" stroke-width="2" opacity=".6"/>
+<g fill="#264e63" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif">
+<text x="84" y="98" font-size="22" letter-spacing="6" fill="#4b7e97">CLOTHESLINE / 拾光绳</text>
+<text x="80" y="208" font-size="68" font-weight="650">把截图挂起来，</text><text x="80" y="294" font-size="68" font-weight="650">把工作接下去。</text>
+<text x="84" y="356" font-size="25" fill="#517b8f">Hang onto a screenshot. Get back to your work.</text>
+<text x="84" y="450" font-size="24">截图 · 文字 · 日程</text><text x="84" y="493" font-size="20" fill="#648697">macOS + Windows  /  本地保存  /  MIT</text>
+<rect x="84" y="555" width="310" height="62" rx="31" fill="#2f6e8a"/><text x="116" y="595" font-size="22" fill="#fff">留住刚刚，继续专注 ↗</text>
+<text x="84" y="704" font-size="17" fill="#6a8d9e">0.4.1 PREVIEW · Windows 尚待真机验证 · 品牌插画</text>
+</g>
+<path d="M825 180Q1130 248 1548 176" fill="none" stroke="#7c9d9c" stroke-width="4"/>
+<circle cx="825" cy="180" r="7" fill="#7c9d9c"/><circle cx="1548" cy="176" r="7" fill="#7c9d9c"/>
+<g transform="translate(860 222) rotate(-5)" filter="url(#shadow)"><rect width="270" height="224" rx="5" fill="#fff"/><rect x="12" y="12" width="246" height="172" fill="#b9d4e2"/><circle cx="205" cy="48" r="21" fill="#fff0bd"/><path d="M12 150 75 65 130 130 175 83 258 158v26H12" fill="#7198a3"/><path d="m12 175 95-66 84 66 67-42v51H12" fill="#426f80"/><text x="18" y="208" fill="#608195" font-size="14" font-family="Arial,sans-serif">a moment worth keeping</text><rect x="124" y="-23" width="17" height="48" rx="3" fill="#d2a779"/></g>
+<g transform="translate(1172 224) rotate(5)" filter="url(#shadow)"><rect width="270" height="270" rx="6" fill="#ffefbe"/><path d="M20 70h230M20 108h230M20 146h230M20 184h230M20 222h230" stroke="#dfcb91" stroke-width="1"/>
+<text x="27" y="62" font-size="25" fill="#6b643e" font-family="Arial,'PingFang SC',sans-serif">先挂起来，</text><text x="27" y="102" font-size="25" fill="#6b643e" font-family="Arial,'PingFang SC',sans-serif">等会儿再用。</text><text x="27" y="176" font-size="17" fill="#8a7c4d" font-family="Arial,sans-serif">a thought, not forgotten.</text><rect x="124" y="-23" width="17" height="48" rx="3" fill="#8daea2"/></g>
+<g transform="translate(1006 508)"><rect width="400" height="130" rx="20" fill="#f9fcfd" stroke="#fff" stroke-width="2"/><rect x="22" y="24" width="75" height="80" rx="13" fill="#e0edf2"/><text x="38" y="77" font-size="40" fill="#376c85" font-family="Georgia,serif">30</text><text x="118" y="53" font-size="22" fill="#355b6d" font-family="Arial,'PingFang SC',sans-serif">给今天留一个位置</text><text x="118" y="87" font-size="17" fill="#7a95a4" font-family="Arial,sans-serif">day · week · month</text></g>
+</svg>

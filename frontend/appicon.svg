@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="tile" x1="180" y1="100" x2="840" y2="960" gradientUnits="userSpaceOnUse"><stop stop-color="#38838a"/><stop offset=".55" stop-color="#205a67"/><stop offset="1" stop-color="#153b4d"/></linearGradient>
+    <linearGradient id="paper" x1="330" y1="340" x2="680" y2="810" gradientUnits="userSpaceOnUse"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#e7f2f4"/></linearGradient>
+    <linearGradient id="peg" x1="480" y1="230" x2="538" y2="410" gradientUnits="userSpaceOnUse"><stop stop-color="#f8d9a4"/><stop offset="1" stop-color="#e5ac75"/></linearGradient>
+    <linearGradient id="sky" x1="390" y1="430" x2="600" y2="690" gradientUnits="userSpaceOnUse"><stop stop-color="#dcebec"/><stop offset="1" stop-color="#b6d5d5"/></linearGradient>
+    <filter id="lift" x="-50%" y="-40%" width="200%" height="220%"><feDropShadow dx="0" dy="24" stdDeviation="19" flood-color="#082735" flood-opacity=".30"/></filter>
+    <filter id="pin" x="-80%" y="-40%" width="260%" height="200%"><feDropShadow dx="0" dy="7" stdDeviation="5" flood-color="#082735" flood-opacity=".20"/></filter>
+  </defs>
+  <rect x="64" y="64" width="896" height="896" rx="206" fill="url(#tile)"/>
+  <rect x="65" y="65" width="894" height="894" rx="205" fill="none" stroke="#ffffff" stroke-opacity=".22" stroke-width="2"/>
+  <path d="M195 298 Q512 403 829 298" fill="none" stroke="#b6dbdc" stroke-opacity=".66" stroke-width="14" stroke-linecap="round"/>
+  <g transform="rotate(-8 512 560)" filter="url(#lift)">
+    <rect x="312" y="350" width="400" height="438" rx="35" fill="url(#paper)"/>
+    <rect x="350" y="393" width="324" height="290" rx="13" fill="url(#sky)"/>
+    <circle cx="590" cy="465" r="27" fill="#f4c99d"/>
+    <path d="M350 610 443 502Q450 494 457 504L553 612 597 563Q604 555 611 563L674 631V670Q674 683 661 683H363Q350 683 350 670Z" fill="#67999a"/>
+    <path d="M350 642 443 550Q450 543 457 552L563 683H363Q350 683 350 670Z" fill="#3e777e"/>
+    <path d="M464 734h96" fill="none" stroke="#acc6ce" stroke-width="11" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#pin)" transform="rotate(5 512 326)">
+    <rect x="478" y="238" width="68" height="176" rx="22" fill="url(#peg)"/>
+    <path d="M490 321h44" stroke="#c78e59" stroke-opacity=".65" stroke-width="5" stroke-linecap="round"/>
+    <path d="M492 257v39" stroke="#fff3d8" stroke-opacity=".7" stroke-width="7" stroke-linecap="round"/>
+  </g>
+</svg>

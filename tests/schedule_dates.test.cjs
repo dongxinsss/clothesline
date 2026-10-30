@@ -1,0 +1,12 @@
+process.env.TZ='Asia/Taipei';
+const assert=require('node:assert/strict');
+const dates=require('../frontend/schedule_dates.js');
+assert.deepEqual(dates.range('2026-10-26','day'),['2026-10-26','2026-10-26']);
+assert.deepEqual(dates.range('2026-10-26','week'),['2026-10-26','2026-11-01']);
+assert.deepEqual(dates.range('2026-11-01','week'),['2026-10-26','2026-11-01']);
+assert.deepEqual(dates.range('2026-10-26','month'),['2026-10-01','2026-10-31']);
+assert.deepEqual(dates.range('2024-02-29','month'),['2024-02-01','2024-02-29']);
+assert.equal(dates.shift('2026-01-31','month',1),'2026-02-01');
+assert.equal(dates.shift('2026-12-31','day',1),'2027-01-01');
+assert.equal(dates.iso(new Date('2026-10-26T00:30:00+08:00')),'2026-10-26');
+console.log('Schedule day/week/month and local-date boundaries verified.');

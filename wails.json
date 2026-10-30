@@ -1,0 +1,10 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "Clothesline",
+  "outputfilename": "Clothesline",
+  "frontend:dir": "frontend",
+  "frontend:build": "",
+  "frontend:install": "",
+  "author": { "name": "Clothesline" },
+  "info": { "companyName": "Clothesline", "productName": "拾光绳", "productVersion": "0.4.1", "copyright": "Copyright © 2026 Clothesline", "comments": "Local screenshot and text shelf" }
+}
