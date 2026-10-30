@@ -51,3 +51,7 @@ Suggested topics: `macos`, `windows`, `golang`, `wails`, `screenshot`, `clipboar
 When sharing, keep the preview/testing qualifier. Avoid claims such as verified
 support for every messenger, measured memory savings, OCR, automatic scrolling,
 cloud sync, or multilingual app UI; those are not established features.
+
+## 小红书专用素材
+
+[五张 3:4 竖图与可复制文案](xiaohongshu/README.md)，包括原创封面、截图文字、日程历史、主题设置和试用入口；内页使用实际的示例界面截图。
